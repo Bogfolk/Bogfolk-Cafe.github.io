@@ -8,8 +8,8 @@
 }
 
 html {
-	background: var(--white);
-	color: var(--smokyBlack);
+	background: var(--deepJungleGreen);
+	color: var(--white);
 }
 
 body {
@@ -29,6 +29,7 @@ h1 {
 }
 
 footer {
+	color: var(--smokyBlack);
 	font-size: 0.75rem;
 	text-align: center;
 	margin-top: 1rem;
