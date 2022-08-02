@@ -1,0 +1,39 @@
+:root {
+	/* These are the colors from palette picked by Strega. */
+	--smokyBlack: #100e0d;
+	--deepJungleGreen: #004d4d;
+	--lemonCurry: #d1a41b;
+	--tartOrange: #f54040;
+	--white: #ffffff;
+}
+
+html {
+	background: var(--white);
+	color: var(--smokyBlack);
+}
+
+body {
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	font-size: 1.25rem;
+}
+
+.banner > img {
+	width: 100%;
+}
+
+h1 {
+	font-family: 'Bebas Neue', cursive;
+	text-align: center;
+	font-size: 3rem;
+}
+
+footer {
+	font-size: 0.75rem;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.center {
+	text-align: center;
+}
