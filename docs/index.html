@@ -27,12 +27,38 @@
 		<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,700;1,400&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="assets/bogfolk.css">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="assets/bogfolk.js"></script>
+
 	</head>
 
 	<body>
-		<div class="banner">
+		<div id="banner">
 			<img src="assets/bogfolk_banner.png" alt="The Bogfolk Cafè">
 		</div>
+
+		<div id="navbar">
+				<div class="hamburger-lines" onclick="navbarOnclick()">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+				</div>
+			<div class="navbar-item active">
+				<a href="javascript:void(0)">Home</a>
+			</div>
+			<div class="navbar-item">
+				<a href="javascript:void(0)">Our Approach</a>
+			</div>
+			<div class="navbar-item">
+				<a href="javascript:void(0)">The Bogfolk</a>
+			</div>
+			<div class="navbar-item">
+				<a href="javascript:void(0)">Contact Us</a>
+			</div>
+		</div>
+
 		<h1>
 			???
 		</h1>
@@ -41,7 +67,11 @@
 		</div>
 
 		<div class="center">
-			<img src="assets/missy_cup_logo.png" alt="Missy in a cup">
+			<img class="bigMissy" src="assets/missy_cup_logo.png" alt="Missy in a cup">
+		</div>
+
+		<div class="center">
+			<img class="bigMissy" src="assets/missy_cup_logo.png" alt="Missy in a cup">
 		</div>
 
 		<footer>
