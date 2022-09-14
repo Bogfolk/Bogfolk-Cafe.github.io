@@ -7,6 +7,12 @@
 	--white: #ffffff;
 }
 
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 html {
 	background: var(--deepJungleGreen);
 	color: var(--white);
@@ -19,14 +25,13 @@ body {
 }
 
 main {
-	padding: 0 30px 30px;
-	/* This intentionally uses px, that don't scale to mobile. We want smaller padding in mobile. */
+	padding: 0 2rem 2rem;
 }
 
 h1 {
 	font-family: 'Bebas Neue', cursive;
 	text-align: center;
-	font-size: 3rem;
+	font-size: 5rem;
 }
 
 a {
@@ -39,9 +44,117 @@ footer {
 	margin-top: 1rem;
 }
 
+#banner {
+	display: flex;
+}
+
+#banner > img {
+	width: 100%;
+}
+
+.center {
+	text-align: center;
+}
+
+.bigMissy {
+	max-width: 100%;
+}
+
+/* Styling to handle bogfolk profile animations. */
+.hovermation {
+    transition: transform .75s ease-out,opacity .75s ease-out;
+    transition-delay: .3s;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.hovermation .text {
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    padding: 1.25rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.hovermation .element {
+    overflow: hidden;
+    position: relative;
+}
+
+.hovermation .element:hover .inner {
+	top: 0;
+	bottom: 0;
+}
+
+.hovermation .inner {
+    left: 0;
+    top: 0;
+    position: relative;
+    background: var(--tartOrange);
+    transition: all .5s ease;
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    right: 0;
+    position: absolute;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.hovermation img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* Styling for grid. */
+.container {
+	max-width: 94vw;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: 0.333rem;
+	margin-right: 0.333rem;
+}
+
+.col-grid {
+    padding-left: 0.333rem;
+    padding-right: 0.333rem;
+    padding-bottom: 0.666rem;
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    position: relative;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+	.col-grid {
+		flex: 0 0 50%;
+		max-width: 50%;
+	}
+}
+
+@media (max-width: 400px) {
+	.col-grid {
+		flex: 0 0 100%;
+		max-width: 100%;
+	}
+}
+
+/* Styling for the Navbar. */
 #navbar {
 	overflow: hidden;
 	background: var(--tartOrange);
+	z-index: 10;
 }
 
 #navbar .navbar-item {
@@ -64,50 +177,26 @@ footer {
 	background-color: var(--lemonCurry);
 }
 
-#banner {
-	display: flex;
-}
-
-#banner > img {
-	width: 100%;
-}
-
-.center {
-	text-align: center;
-}
-
-.bigMissy {
-	max-width: 100%;
-}
-
-@media screen and (max-width: 400px) {
+@media (max-width: 400px) {
 	#navbar.sticky {
 		width: fit-content;
 	}
-}
 
-@media screen and (max-width: 400px) {
 	#navbar .navbar-item {
 		text-align: center;
 		float: none;
 		display: none;
 	}
-}
 
-@media screen and (max-width: 400px) {
 	#navbar {
 		width: fit-content;
 		height: auto;
 		position: relative;
 		background: unset;
 	}
-}
 
-/* Mobile menu stuff. */
-@media screen and (max-width: 400px) {
 	#navbar .hamburger-lines {
 		height: 1.625rem;
-		/* width: 2rem; */
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
@@ -131,7 +220,7 @@ footer {
 
 	#navbar.mobile-navbar-display .navbar-item {
 		display: block;
-		width: 100vw;	/* Why doesn't 100% work? */
+		width: 100vw;
 	}
 }
 
