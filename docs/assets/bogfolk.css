@@ -18,6 +18,11 @@ body {
 	font-size: 1.25rem;
 }
 
+main {
+	padding: 0 30px 30px;
+	/* This intentionally uses px, that don't scale to mobile. We want smaller padding in mobile. */
+}
+
 h1 {
 	font-family: 'Bebas Neue', cursive;
 	text-align: center;
