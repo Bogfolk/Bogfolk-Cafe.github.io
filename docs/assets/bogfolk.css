@@ -43,6 +43,10 @@ ul {
 	margin-bottom: 1rem;
 }
 
+li {
+	list-style-image: url("/assets/missy.svg");
+}
+
 a {
 	color: #eddba4;
 }
