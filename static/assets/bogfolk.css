@@ -1,6 +1,6 @@
 :root {
 	/* These are the colors from palette picked by Strega. */
-	--smokyBlack: #100e0d;
+	--smokeyBlack: #100e0d;
 	--deepJungleGreen: #004d4d;
 	--lemonCurry: #d1a41b;
 	--tartOrange: #f54040;
@@ -34,8 +34,24 @@ h1 {
 	font-size: 5rem;
 }
 
+p {
+	margin-bottom: 1rem;
+}
+
+ul {
+	padding-left: 1rem;
+	margin-bottom: 1rem;
+}
+
 a {
-	color: var(--smokyBlack);
+	color: #eddba4;
+}
+
+blockquote {
+	font-style: italic;
+	margin-left: 2rem;
+	margin-right: 2rem;
+	margin-bottom: 1rem;
 }
 
 footer {
@@ -58,6 +74,12 @@ footer {
 
 .bigMissy {
 	max-width: 100%;
+}
+
+.wallOText {
+	max-width: 110vh;
+	margin-left: auto;
+	margin-right: auto;
 }
 
 /* Styling to handle bogfolk profile animations. */
@@ -161,7 +183,7 @@ footer {
 	background-color: var(--tartOrange);
 	float: left;
 	display: block;
-	color: var(--smokyBlack);
+	color: var(--smokeyBlack);
 	text-align: center;
 	padding: 1rem;
 	text-decoration: none;
@@ -175,6 +197,10 @@ footer {
 
 #navbar .navbar-item.active {
 	background-color: var(--lemonCurry);
+}
+
+#navbar a {
+	color: var(--smokeyBlack);
 }
 
 @media (max-width: 400px) {
@@ -204,6 +230,7 @@ footer {
 		padding: 0.5rem;
 		background-color: var(--tartOrange);
 		border-radius: 0.3rem;
+		box-sizing: content-box;
 	}
 
 	#navbar.mobile-navbar-display .hamburger-lines {
@@ -215,7 +242,7 @@ footer {
 		height: 0.25rem;
 		width: 2rem;
 		border-radius: 0.7rem;
-		background: var(--smokyBlack);
+		background: var(--smokeyBlack);
 	}
 
 	#navbar.mobile-navbar-display .navbar-item {
