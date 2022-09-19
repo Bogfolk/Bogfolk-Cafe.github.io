@@ -32,7 +32,7 @@ main {
 }
 
 h1 {
-	font-family: 'Bebas Neue', cursive;
+	font-family: 'Bebas Neue';
 	text-align: center;
 	font-size: 5rem;
 }
@@ -73,6 +73,7 @@ footer {
 
 #banner > img {
 	width: 100%;
+	aspect-ratio: 3 / 1;
 }
 
 .center {
