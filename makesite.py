@@ -215,7 +215,7 @@ def main():
         'base_path': '',
         'subtitle': 'The Bogfolk Cafè',
         'site_url': 'http://localhost:8000',
-        'socialImage': 'assets/missy_cup_logo.png',
+        'socialImage': 'assets/missy_cup_logo.jpg',
         'socialImageAlt': 'Missy in a cup',
         'current_year': datetime.datetime.now().year,
         'navbar_class': navbar_class

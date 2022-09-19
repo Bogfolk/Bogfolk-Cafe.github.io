@@ -35,7 +35,7 @@ This file is based off of the Brand Identity Guidlines infographics created by S
 ## Images
 
 ### Logo
-!(Logo of Missy in a cup)[../assets/missy_cup_logo.png]
+!(Logo of Missy in a cup)[../assets/missy_cup_logo.jpg]
 Use when medium size images are preferred. This is our main brand image: Use it
 as much as possible.
 
