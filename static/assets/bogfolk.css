@@ -175,6 +175,20 @@ footer {
 	margin-right: 0.333rem;
 }
 
+.socials {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.socials div {
+	margin: auto;
+}
+
+.socials svg {
+	width: 6rem;
+	fill: var(--white);
+}
+
 .col-grid {
     padding-left: 0.333rem;
     padding-right: 0.333rem;
