@@ -69,11 +69,14 @@ footer {
 
 #banner {
 	display: flex;
+	background: #006464;
 }
 
 #banner > img {
 	width: 100%;
+	max-width: 1500px;
 	aspect-ratio: 3 / 1;
+	margin: auto;
 }
 
 .center {
