@@ -231,6 +231,10 @@ footer {
 	display: block;
 }
 
+#display-menu {
+	border-width: 0;
+}
+
 #navbar .navbar-item {
 	background-color: var(--tartOrange);
 	float: left;
@@ -273,7 +277,7 @@ footer {
 		background: unset;
 	}
 
-	#navbar .hamburger-lines {
+	#display-menu {
 		height: 1.625rem;
 		z-index: 2;
 		display: flex;
@@ -285,11 +289,11 @@ footer {
 		box-sizing: content-box;
 	}
 
-	#navbar.mobile-navbar-display .hamburger-lines {
+	#navbar.mobile-navbar-display #display-menu {
 		border-radius: unset;
 	}
 
-	#navbar .hamburger-lines .line {
+	#display-menu .line {
 		display: block;
 		height: 0.25rem;
 		width: 2rem;
