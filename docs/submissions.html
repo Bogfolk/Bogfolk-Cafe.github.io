@@ -32,19 +32,23 @@
 
 <body>
 
+<div hidden>
+	<span id="new-window">Opens in a new window</span>
+</div>
+
 <header>
 	<div id="banner">
-		<img src="/assets/bogfolk_banner.jpg" alt="The Bogfolk Cafè">
+		<img src="/assets/bogfolk_banner.jpg" alt="Stylized text that says 'Bogfolk' and the bogfolk mascot, Missy">
 	</div>
 </header>
 
 <nav>
 	<div id="navbar">
-		<div class="hamburger-lines" onclick="navbarOnclick()">
+		<button id="display-menu" title="Open main menu" class="hamburger-lines" onclick="navbarOnclick()">
 			<span class="line line1"></span>
 			<span class="line line2"></span>
 			<span class="line line3"></span>
-		</div>
+		</button>
 		<div class="navbar-item">
 			<a href="/">Home</a>
 		</div>

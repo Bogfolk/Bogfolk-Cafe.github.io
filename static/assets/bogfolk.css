@@ -129,6 +129,7 @@ footer {
     position: absolute;
     left: 0;
     right: 0;
+    background: inherit;
 }
 
 .hovermation .element {
@@ -154,6 +155,11 @@ footer {
     position: absolute;
     z-index: 1;
     overflow: hidden;
+}
+
+.hovermation .inner p {
+    background: inherit;
+	color: var(--smokeyBlack);
 }
 
 .hovermation img {
@@ -222,6 +228,7 @@ footer {
 	overflow: hidden;
 	background: var(--tartOrange);
 	z-index: 10;
+	display: block;
 }
 
 #navbar .navbar-item {
