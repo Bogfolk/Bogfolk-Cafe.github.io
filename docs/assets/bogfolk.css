@@ -51,6 +51,12 @@ h3.lichoma {
 	margin-bottom: 1rem;
 }
 
+@media (max-width: 410px) {
+	h3.lichoma {
+		font-size: 2rem;
+	}
+}
+
 p {
 	margin-bottom: 1rem;
 }
@@ -275,23 +281,18 @@ footer {
 	color: var(--smokeyBlack);
 }
 
-	/*
-	height: 27rem;
-	min-width: 48rem;
-	*/
-
 .video-container {
 	position: relative;
-	width: 100%;
+	max-width: 560px;
+	max-height: 80vh;
 	aspect-ratio: 16/9;
-	overflow: hidden;
+	margin: auto;
 }
 
 .video-container iframe, .video-container object, .video-container embed {
-	position: absolute;
-	top: 0;
 	left: 0;
-	aspect-ratio: 16/9;
+	width: 100%;
+	height: 100%;
 }
 
 .glitch {
