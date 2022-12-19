@@ -122,17 +122,22 @@ def read_content(filename):
     return content
 
 
-def render(template, filename, **params):
+def render(template, allow_no_match, **params):
     """Replace placeholders in template with values from params."""
+    filename = params.get('filename')
     def replace_fn_call(match):
         f = params.get(match.group(1))
         if f is None:
+            if allow_no_match:
+                return match.group(0)
             raise RuntimeError(f'The variable {match.group(1)} is unset for rendering {filename}.')
-        return f(filename, match.group(2))
+        return f(params, match.group(2))
 
     def replace(match):
         ret = params.get(match.group(1))
         if ret is None:
+            if allow_no_match:
+                return match.group(0)
             raise RuntimeError(f'The variable {match.group(1)} is unset for rendering {filename}.')
         return str(ret)
 
@@ -158,17 +163,18 @@ def make_pages(src, dst, layout, **params):
             page_params['socialImageType'] = 'image/png'
         elif extension == 'svg':
             page_params['socialImageType'] = 'image/svg+xml'
+        page_params['filename'] = src_path
 
         # Populate placeholders in content if content-rendering is enabled.
         if page_params.get('render') == 'yes':
-            rendered_content = render(page_params['content'], src_path, **page_params)
+            rendered_content = render(page_params['content'], False, **page_params)
             page_params['content'] = rendered_content
             content['content'] = rendered_content
 
         items.append(content)
 
-        dst_path = render(dst, src_path, **page_params)
-        output = render(layout, src_path, **page_params)
+        dst_path = render(dst, False, **page_params)
+        output = render(layout, False, **page_params)
 
         log('Rendering {} => {} ...', src_path, dst_path)
         fwrite(dst_path, output)
@@ -193,11 +199,12 @@ def make_pages(src, dst, layout, **params):
 #     fwrite(dst_path, output)
 
 
-def navbar_class(src, link):
+def navbar_class(params, link):
     """
     Returns the appropriate classes for the navbar based on the current file
     name and the destination of the link.
     """
+    src = params.get('filename')
     if os.path.basename(src) == link:
         return 'navbar-item active'
     return 'navbar-item'
@@ -227,34 +234,33 @@ def main():
 
     # Load layouts.
     page_layout = fread('layout/page.html')
-    '''
-    # This code is needed if we decide to add a blog.
     post_layout = fread('layout/post.html')
+
+    # This code is needed if we decide to add a blog.
+    '''
     list_layout = fread('layout/list.html')
     item_layout = fread('layout/item.html')
     feed_xml = fread('layout/feed.xml')
     item_xml = fread('layout/item.xml')
     '''
 
-    '''
     # This code is needed if we decide to add a blog.
     # Combine layouts to form final layouts.
-    post_layout = render(page_layout, content=post_layout)
+    post_layout = render(page_layout, True, content=post_layout)
+    '''
     list_layout = render(page_layout, content=list_layout)
     '''
 
     # Create site pages.
-    # make_pages('content/_index.html', site_dir + '/index.html',
-    #            page_layout, **params)
     make_pages('content/*.html', site_dir + '/{{ slug }}.html',
                page_layout, **params)
 
-    '''
     # This code is needed if we decide to add a blog.
     # Create blogs.
     blog_posts = make_pages('content/blog/*.md',
-                            site_dir + '/blog/{{ slug }}/index.html',
+                            site_dir + '/blog/{{ slug }}.html',
                             post_layout, blog='blog', **params)
+    '''
     make_list(blog_posts, site_dir + '/blog/index.html',
               list_layout, item_layout, blog='blog', title='Blog', **params)
     make_list(blog_posts, site_dir + '/blog/rss.xml',
