@@ -203,8 +203,7 @@ def navbar_class(src, link):
     return 'navbar-item'
 
 
-def main():
-    site_dir = 'docs'
+def main(site_dir='docs'):
     # Create a new site directory from scratch.
     if os.path.isdir(site_dir):
         shutil.rmtree(site_dir)
@@ -265,4 +264,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    if len(sys.argv) >= 2:
+        main(sys.argv[1])
+    else:
+        main()
