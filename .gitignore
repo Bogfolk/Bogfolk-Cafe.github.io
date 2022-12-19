@@ -1,6 +1,7 @@
 # Currently I am using http-server to serve files locally. That generates the
-# the following package files, which aren't necessary for the site. If we add
-# npm packages in the future, this will probably need to be changed.
+# following package files, which aren't necessary for the site. If we add npm
+# packages in the future, this will probably need to be changed.
 package-lock.json
 package.json
 node_modules
+.vercel

@@ -37,6 +37,20 @@ h1 {
 	font-size: 5rem;
 }
 
+h2.lichoma {
+	font-family: 'Bebas Neue';
+	text-align: center;
+	font-size: 4rem;
+	font-weight: normal;
+}
+
+h3.lichoma {
+	font-family: 'Alegreya Sans SC', sans-serif;
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
 p {
 	margin-bottom: 1rem;
 }
@@ -65,6 +79,7 @@ footer {
 	font-size: 0.75rem;
 	text-align: center;
 	margin-top: 1rem;
+	margin-bottom: 0.75rem;
 }
 
 #banner {
@@ -83,8 +98,9 @@ footer {
 	text-align: center;
 }
 
-.bigMissy {
+.bigImage {
 	max-width: 100%;
+	max-height: 80vh;
 }
 
 .wallOText {
@@ -224,10 +240,15 @@ footer {
 }
 
 /* Styling for the Navbar. */
+nav {
+	position: sticky;
+	z-index: 10;
+	top: 0;
+}
+
 #navbar {
 	overflow: hidden;
 	background: var(--tartOrange);
-	z-index: 10;
 	display: block;
 }
 
@@ -257,6 +278,89 @@ footer {
 
 #navbar a {
 	color: var(--smokeyBlack);
+}
+
+.video-container {
+	position: relative;
+	max-width: 560px;
+	max-height: 80vh;
+	aspect-ratio: 16/9;
+	margin: auto;
+}
+
+.video-container iframe, .video-container object, .video-container embed {
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.glitch {
+	animation: glitch 1s linear infinite;
+	display: inline-block;
+}
+
+@keyframes glitch{
+	2%,64%{
+		transform: translate(2px,0) skew(0deg);
+		z-index: 1;
+	}
+	4%,60%{
+		transform: translate(-2px,0) skew(0deg);
+		z-index: 1;
+	}
+	62%{
+		transform: translate(0,0) skew(5deg);
+		z-index: 1;
+	}
+}
+
+.glitch:before, .glitch:after{
+	content: attr(title);
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+.glitch:before{
+	animation: glitchTop 1s linear infinite;
+	clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop{
+	2%,64%{
+		transform: translate(2px,-2px);
+		z-index: 1;
+	}
+	4%,60%{
+		transform: translate(-2px,2px);
+		z-index: 1;
+	}
+	62%{
+		transform: translate(13px,-1px) skew(-13deg);
+		z-index: 1;
+	}
+}
+
+.glitch:after{
+	animation: glitchBotom 1.5s linear infinite;
+	clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+	-webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBotom{
+	2%,64%{
+		transform: translate(-2px,0);
+		z-index: 1;
+	}
+	4%,60%{
+		transform: translate(-2px,0);
+		z-index: 1;
+	}
+	62%{
+		transform: translate(-22px,5px) skew(21deg);
+		z-index: 1;
+	}
 }
 
 @media (max-width: 400px) {
