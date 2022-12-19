@@ -22,7 +22,7 @@ jobs:
       - name: Install Python Dependencies
         run: pip install -r requirements.txt
       - name: Build files.
-        run: ./makesite .vercel/output/static
+        run: ./makesite.py .vercel/output/static
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Deploy Project Artifacts to Vercel
