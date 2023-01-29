@@ -1,5 +1,6 @@
 :root {
     --lichomaRed: #e41a47;
+	--blackestBlack: #000000;
 }
 
 html {
@@ -16,12 +17,31 @@ html {
 }
 
 #navbar a, a {
-	color: #000000;
+	color: var(--blackestBlack);
 	font-weight: 400;
+}
+
+#navbar .navbar-item.active {
+  background-color: var(--white);
 }
 
 ul > li {
 	list-style-image: url("/assets/missy_lichoma.svg");
+}
+
+blockquote.boxed {
+  background: var(--white);
+  color: var(--blackestBlack);
+}
+
+.video-container {
+  width: 560px;
+}
+
+@media (max-width: 560px) {
+  .video-container {
+    width: unset;
+  }
 }
 
 @media (max-width: 400px) {

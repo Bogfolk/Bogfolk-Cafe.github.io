@@ -136,7 +136,7 @@ footer {
   margin: auto;
 }
 
-img.right {
+.right {
   float: right;
   max-width: 50%;
 }
@@ -458,7 +458,7 @@ nav {
     width: 100vw;
   }
 
-  img.right {
+  .right {
 	float: none;
 	max-width: 100%;
   }
