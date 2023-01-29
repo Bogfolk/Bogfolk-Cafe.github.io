@@ -1,0 +1,31 @@
+:root {
+    --lichomaRed: #e41a47;
+}
+
+html {
+	background: var(--lichomaRed);
+	color: var(--white);
+}
+
+#navbar {
+	background: var(--lichomaRed);
+}
+
+#navbar .navbar-item {
+	background-color: var(--lichomaRed);
+}
+
+#navbar a, a {
+	color: #000000;
+	font-weight: 400;
+}
+
+ul > li {
+	list-style-image: url("/assets/missy_lichoma.svg");
+}
+
+@media (max-width: 400px) {
+	#display-menu {
+		background-color: var(--lichomaRed);
+	}
+}
