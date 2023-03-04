@@ -113,6 +113,10 @@ def read_content(filename):
         except ImportError as e:
             log('WARNING: Cannot render Markdown in {}: {}', filename, str(e))
 
+    # Convert projectCss into an appropriate URL.
+    if 'projectCss' in content:
+        content['projectCssUrl'] = '<link rel="stylesheet" href="/assets/{}">'.format(content['projectCss'])
+
     # Update the dictionary with content and RFC 2822 date.
     content.update({
         'content': text,
@@ -217,7 +221,8 @@ def main(site_dir='docs'):
         'socialImage': 'assets/missy_cup_logo.jpg',
         'socialImageAlt': 'Missy in a cup',
         'current_year': datetime.datetime.now().year,
-        'navbar_class': navbar_class
+        'navbar_class': navbar_class,
+        'projectCssUrl': ''
     }
 
     # If params.json exists, load it.
