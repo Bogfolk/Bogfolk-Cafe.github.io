@@ -126,14 +126,19 @@ footer {
 
 #banner {
   display: flex;
-  background: #006464;
+  width: 100vw;
 }
 
 #banner > img {
-  width: 100%;
-  max-width: 1500px;
-  aspect-ratio: 3 / 1;
-  margin: auto;
+  max-width: 100%;
+  max-height: 15vh;
+  aspect-ratio: 2.312;
+  margin-left: 5vw;
+}
+
+#banner > #bannerMissy {
+	padding: 1rem 0;
+	margin-left: 0;
 }
 
 .right {
