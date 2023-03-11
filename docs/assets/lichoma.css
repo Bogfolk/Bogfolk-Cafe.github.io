@@ -25,6 +25,12 @@ html {
   background-color: var(--white);
 }
 
+@media (max-width: 400px) {
+	#display-menu {
+		background-color: var(--lichomaRed);
+	}
+}
+
 ul > li {
 	list-style-image: url("/assets/missy_lichoma.svg");
 }
@@ -38,14 +44,42 @@ blockquote.boxed {
   width: 560px;
 }
 
-@media (max-width: 560px) {
-  .video-container {
-    width: unset;
+.right {
+  float: right;
+  max-width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .right {
+	max-width: 60%;
   }
 }
 
-@media (max-width: 400px) {
-	#display-menu {
-		background-color: var(--lichomaRed);
-	}
+@media (max-width: 960px) {
+  .video-container {
+    width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-container {
+    width: unset;
+  }
+
+  .right {
+	float: none;
+	max-width: 100%;
+  }
+}
+
+.left {
+  float: left;
+  max-width: 50%;
+}
+
+@media (max-width: 640px) {
+  .left {
+	float: unset;
+	max-width: 100%;
+  }
 }
