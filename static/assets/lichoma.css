@@ -10,6 +10,7 @@ html {
 
 #navbar {
 	background: var(--lichomaRed);
+	border-bottom: solid var(--white);
 }
 
 #navbar .navbar-item {
@@ -29,6 +30,22 @@ html {
 	#display-menu {
 		background-color: var(--lichomaRed);
 	}
+}
+
+h2 {
+  font-family: 'Bebas Neue';
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+section > h2 > a {
+  color: var(--white);
+}
+
+h3 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
 }
 
 ul > li {
