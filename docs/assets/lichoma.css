@@ -26,10 +26,14 @@ html {
   background-color: var(--white);
 }
 
-@media (max-width: 400px) {
-	#display-menu {
-		background-color: var(--lichomaRed);
-	}
+@media (max-width: 800px) {
+  #display-menu {
+	background-color: var(--lichomaRed);
+  }
+
+  #display-menu .line {
+    background: var(--white);
+  }
 }
 
 h2 {
@@ -64,6 +68,8 @@ blockquote.boxed {
 .right {
   float: right;
   max-width: 50%;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
 }
 
 @media (max-width: 1024px) {
@@ -74,18 +80,14 @@ blockquote.boxed {
 
 @media (max-width: 960px) {
   .video-container {
-    width: 480px;
-  }
-}
-
-@media (max-width: 640px) {
-  .video-container {
     width: unset;
   }
 
   .right {
 	float: none;
 	max-width: 100%;
+    padding-left: 0;
+    padding-bottom: 0;
   }
 }
 
