@@ -222,7 +222,8 @@ def main(site_dir='docs'):
         'socialImageAlt': 'Missy in a cup',
         'current_year': datetime.datetime.now().year,
         'navbar_class': navbar_class,
-        'projectCssUrl': ''
+        'projectCssUrl': '',
+        'bannerMissy': "missy.svg"
     }
 
     # If params.json exists, load it.
