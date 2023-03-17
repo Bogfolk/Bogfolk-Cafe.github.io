@@ -10,6 +10,7 @@ html {
 
 #navbar {
 	background: var(--lichomaRed);
+	border-bottom: solid var(--white);
 }
 
 #navbar .navbar-item {
@@ -25,6 +26,28 @@ html {
   background-color: var(--white);
 }
 
+@media (max-width: 400px) {
+	#display-menu {
+		background-color: var(--lichomaRed);
+	}
+}
+
+h2 {
+  font-family: 'Bebas Neue';
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+section > h2 > a {
+  color: var(--white);
+}
+
+h3 {
+  font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
 ul > li {
 	list-style-image: url("/assets/missy_lichoma.svg");
 }
@@ -38,14 +61,42 @@ blockquote.boxed {
   width: 560px;
 }
 
-@media (max-width: 560px) {
-  .video-container {
-    width: unset;
+.right {
+  float: right;
+  max-width: 50%;
+}
+
+@media (max-width: 1024px) {
+  .right {
+	max-width: 60%;
   }
 }
 
-@media (max-width: 400px) {
-	#display-menu {
-		background-color: var(--lichomaRed);
-	}
+@media (max-width: 960px) {
+  .video-container {
+    width: 480px;
+  }
+}
+
+@media (max-width: 640px) {
+  .video-container {
+    width: unset;
+  }
+
+  .right {
+	float: none;
+	max-width: 100%;
+  }
+}
+
+.left {
+  float: left;
+  max-width: 50%;
+}
+
+@media (max-width: 640px) {
+  .left {
+	float: unset;
+	max-width: 100%;
+  }
 }

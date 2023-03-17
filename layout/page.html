@@ -12,10 +12,10 @@
 	<meta property="og:description" content="The Bogfolk Cafè">
 	<meta property="og:type" content="website">
 	<meta property="og:site_name" content="The Bogfolk Cafè">
-	<meta property="og:image" content="/{{ socialImage }}">
+    <meta property="og:image" content="{{ site_url }}/{{ socialImage }}">
 	<meta property="og:image:type" content="{{ socialImageType }}">
 	<meta property="og:image:alt" content="{{ socialImageAlt }}">
-	<meta property="og:url" content="https://bogfolk-cafe.github.io">
+    <meta property="og:url" content="{{ site_url }}">
 	<meta property="theme-color" content="#004d4d">
 
 	<meta name="twitter:card" content="summary">
@@ -39,7 +39,8 @@
 
 <header>
 	<div id="banner">
-		<img src="/assets/bogfolk_banner.png" alt="Stylized text that says 'Bogfolk' and the bogfolk mascot, Missy">
+		<img src="/assets/bogfolk_banner_transparent_background.png" alt="Stylized text that15ays 'Bogfolk'">
+        <img id="bannerMissy" src="/assets/{{ bannerMissy }}" alt="The bogfolk mascot, Missy.">
 	</div>
 </header>
 

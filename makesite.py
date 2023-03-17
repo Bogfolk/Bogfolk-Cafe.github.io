@@ -217,12 +217,13 @@ def main(site_dir='docs'):
     params = {
         'base_path': '',
         'subtitle': 'The Bogfolk Cafè',
-        'site_url': 'http://localhost:8000',
+        'site_url': 'https://bogfolk.com',
         'socialImage': 'assets/missy_cup_logo.jpg',
         'socialImageAlt': 'Missy in a cup',
         'current_year': datetime.datetime.now().year,
         'navbar_class': navbar_class,
-        'projectCssUrl': ''
+        'projectCssUrl': '',
+        'bannerMissy': "missy.svg"
     }
 
     # If params.json exists, load it.

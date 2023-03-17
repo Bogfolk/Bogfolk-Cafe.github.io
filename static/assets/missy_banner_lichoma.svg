@@ -11,7 +11,7 @@
          fill="#000000"
        }
        #missyBody {
-         fill: #f54444;
+         fill: #ffffff;
          stroke: #f54444;
        }
        #eye_whites {
