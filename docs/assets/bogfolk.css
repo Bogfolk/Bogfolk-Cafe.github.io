@@ -131,14 +131,16 @@ footer {
 
 #banner {
   display: flex;
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #banner > img {
-  max-width: 100%;
+  max-width: 67%;
   max-height: 15vh;
   aspect-ratio: 2.312;
-  margin-left: 5vw;
 }
 
 #banner > #bannerMissy {
@@ -161,6 +163,13 @@ footer {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media (max-width: 960px) {
+  /* This media query needs to cover every case where we get the mobile menu. */
+  .wallOText {
+    max-width: unset;
+  }
 }
 
 /* styling for the 404 page. */
@@ -305,6 +314,7 @@ nav {
   overflow: hidden;
   background: var(--tartOrange);
   display: block;
+  width: 100%;
 }
 
 #display-menu {
@@ -319,12 +329,6 @@ nav {
   text-align: center;
   padding: 1rem;
   text-decoration: none;
-}
-
-#navbar.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
 }
 
 #navbar .navbar-item.active {
@@ -418,11 +422,7 @@ nav {
   }
 }
 
-@media (max-width: 640px) {
-  #navbar.sticky {
-    width: fit-content;
-  }
-
+@media (max-width: 800px) {
   #navbar .navbar-item {
     text-align: center;
     float: none;
@@ -430,7 +430,6 @@ nav {
   }
 
   #navbar {
-    width: fit-content;
     height: auto;
     position: relative;
     background: unset;
