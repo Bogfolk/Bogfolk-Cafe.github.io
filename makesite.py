@@ -232,6 +232,7 @@ def main(site_dir='docs'):
 
     # Load layouts.
     page_layout = fread('layout/page.html')
+    redirect_layout = fread('layout/redirect.html')
     '''
     # This code is needed if we decide to add a blog.
     post_layout = fread('layout/post.html')
@@ -253,6 +254,8 @@ def main(site_dir='docs'):
     #            page_layout, **params)
     make_pages('content/*.html', site_dir + '/{{ slug }}.html',
                page_layout, **params)
+    make_pages('content/*.html', site_dir + '/{{ slug }}/index.html',
+               redirect_layout, **params)
 
     '''
     # This code is needed if we decide to add a blog.
