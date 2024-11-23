@@ -62,11 +62,11 @@ ul {
   margin-bottom: 1rem;
 }
 
-ul > li {
+ul>li {
   list-style-image: url("/assets/missy.svg");
 }
 
-ul > li::marker {
+ul>li::marker {
   padding-right: 0.5rem;
 }
 
@@ -74,7 +74,7 @@ ol {
   padding-left: 1.25rem;
 }
 
-ol > li {
+ol>li {
   list-style-image: none;
 }
 
@@ -90,7 +90,7 @@ section {
   width: 100%;
 }
 
-#compatibleLogos > div {
+#compatibleLogos>div {
   max-width: 30%;
   display: inline-block;
 }
@@ -103,11 +103,11 @@ blockquote {
   font-style: italic;
   margin-left: 3rem;
   margin-right: 3rem;
-  margin-bottom: 1rem;
 }
 
 .author {
-  margin-left: 5rem;
+  margin-left: 8rem;
+  margin-bottom: 1rem;
 }
 
 blockquote.note {
@@ -137,13 +137,13 @@ footer {
   margin-right: auto;
 }
 
-#banner > img {
+#banner>img {
   max-width: 67%;
   max-height: 15vh;
   aspect-ratio: 2.312;
 }
 
-#banner > #bannerMissy {
+#banner>#bannerMissy {
   padding: 1rem 0;
   aspect-ratio: 1;
   margin-left: 0;
@@ -166,6 +166,7 @@ footer {
 }
 
 @media (max-width: 960px) {
+
   /* This media query needs to cover every case where we get the mobile menu. */
   .wallOText {
     max-width: unset;
@@ -194,26 +195,26 @@ footer {
 
 /* Styling to handle bogfolk profile animations. */
 .hovermation {
-    transition: transform .75s ease-out,opacity .75s ease-out;
-    transition-delay: .3s;
-    opacity: 1;
-    transform: translateX(0);
+  transition: transform .75s ease-out, opacity .75s ease-out;
+  transition-delay: .3s;
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hovermation .text {
-    top: 50%;
-    transform: translateY(-50%);
-    text-align: center;
-    padding: 1.25rem;
-    position: absolute;
-    left: 0;
-    right: 0;
-    background: inherit;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  padding: 1.25rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background: inherit;
 }
 
 .hovermation .element {
-    overflow: hidden;
-    position: relative;
+  overflow: hidden;
+  position: relative;
 }
 
 .hovermation .element:hover .inner {
@@ -222,30 +223,30 @@ footer {
 }
 
 .hovermation .inner {
-    left: 0;
-    top: 0;
-    position: relative;
-    background: var(--tartOrange);
-    transition: all .5s ease;
-    width: 100%;
-    height: 100%;
-    top: -100%;
-    right: 0;
-    position: absolute;
-    z-index: 1;
-    overflow: hidden;
+  left: 0;
+  top: 0;
+  position: relative;
+  background: var(--tartOrange);
+  transition: all .5s ease;
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  right: 0;
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .hovermation .inner p {
-    background: inherit;
+  background: inherit;
   color: var(--smokeyBlack);
 }
 
 .hovermation img {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    vertical-align: middle;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
 }
 
 /* Styling for grid. */
@@ -280,13 +281,13 @@ footer {
 }
 
 .col-grid {
-    padding-left: 0.333rem;
-    padding-right: 0.333rem;
-    padding-bottom: 0.666rem;
-    flex: 0 0 33.33333%;
-    max-width: 33.33333%;
-    position: relative;
-    width: 100%;
+  padding-left: 0.333rem;
+  padding-right: 0.333rem;
+  padding-bottom: 0.666rem;
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  position: relative;
+  width: 100%;
 }
 
 @media (max-width: 960px) {
@@ -347,7 +348,9 @@ nav {
   margin: auto;
 }
 
-.video-container iframe, .video-container object, .video-container embed {
+.video-container iframe,
+.video-container object,
+.video-container embed {
   left: 0;
   width: 100%;
   height: 100%;
@@ -358,66 +361,82 @@ nav {
   display: inline-block;
 }
 
-@keyframes glitch{
-  2%,64%{
-    transform: translate(2px,0) skew(0deg);
+@keyframes glitch {
+
+  2%,
+  64% {
+    transform: translate(2px, 0) skew(0deg);
     z-index: 1;
   }
-  4%,60%{
-    transform: translate(-2px,0) skew(0deg);
+
+  4%,
+  60% {
+    transform: translate(-2px, 0) skew(0deg);
     z-index: 1;
   }
-  62%{
-    transform: translate(0,0) skew(5deg);
+
+  62% {
+    transform: translate(0, 0) skew(5deg);
     z-index: 1;
   }
 }
 
-.glitch:before, .glitch:after{
+.glitch:before,
+.glitch:after {
   content: attr(title);
   position: absolute;
   left: 0;
   top: 0;
 }
 
-.glitch:before{
+.glitch:before {
   animation: glitchTop 1s linear infinite;
   clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
 }
 
-@keyframes glitchTop{
-  2%,64%{
-    transform: translate(2px,-2px);
+@keyframes glitchTop {
+
+  2%,
+  64% {
+    transform: translate(2px, -2px);
     z-index: 1;
   }
-  4%,60%{
-    transform: translate(-2px,2px);
+
+  4%,
+  60% {
+    transform: translate(-2px, 2px);
     z-index: 1;
   }
-  62%{
-    transform: translate(13px,-1px) skew(-13deg);
+
+  62% {
+    transform: translate(13px, -1px) skew(-13deg);
     z-index: 1;
   }
 }
 
-.glitch:after{
+.glitch:after {
   animation: glitchBotom 1.5s linear infinite;
   clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
   -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
 }
 
-@keyframes glitchBotom{
-  2%,64%{
-    transform: translate(-2px,0);
+@keyframes glitchBotom {
+
+  2%,
+  64% {
+    transform: translate(-2px, 0);
     z-index: 1;
   }
-  4%,60%{
-    transform: translate(-2px,0);
+
+  4%,
+  60% {
+    transform: translate(-2px, 0);
     z-index: 1;
   }
-  62%{
-    transform: translate(-22px,5px) skew(21deg);
+
+  62% {
+    transform: translate(-22px, 5px) skew(21deg);
     z-index: 1;
   }
 }
@@ -466,7 +485,7 @@ nav {
 }
 
 @media (max-width: 640px) and (orientation: landscape) {
-  #banner > img {
+  #banner>img {
     max-height: 25vh;
   }
 }
