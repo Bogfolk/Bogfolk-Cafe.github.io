@@ -6,6 +6,7 @@
 	<title>The Bogfolk Cafè - An Indie RPG Publishing Cooperative</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/assets/bogfolk.css">
+	<link rel="stylesheet" href="/assets/mailerlite.css">
 	
 	<link type="image/png" href="/assets/missy.png" rel="icon">
 
@@ -27,10 +28,25 @@
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
+	<link
+		href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC&family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap"
 		rel="stylesheet">
 
 	<script src="/assets/bogfolk.js"></script>
+
+	<script>
+		function ml_webform_success_27194879() {
+			var $ = ml_jQuery || jQuery;
+			$('.ml-subscribe-form-27194879 .row-success').show();
+			$('.ml-subscribe-form-27194879 .row-form').hide();
+		}
+	</script>
+	<script src="https://groot.mailerlite.com/js/w/webforms.min.js?v176e10baa5e7ed80d35ae235be3d5024"
+		type="text/javascript"></script>
+	<script>
+		fetch("https://assets.mailerlite.com/jsonp/1593280/forms/157106260861257609/takel")
+	</script>
+
 </head>
 
 <body>
@@ -41,8 +57,7 @@
 
 	<header>
 		<div id="banner">
-			<img src="/assets/bogfolk_banner_transparent_background.png"
-				alt="Stylized text that says 'Bogfolk'">
+			<img src="/assets/bogfolk_banner_transparent_background.png" alt="Stylized text that says 'Bogfolk'">
 			<img id="bannerMissy" src="/assets/missy.svg" alt="The bogfolk mascot, Missy.">
 		</div>
 	</header>
@@ -126,6 +141,55 @@
 <div class="center">
 	<img class="bigImage" src="assets/MetaFire_cover.png"
 		alt="A rendering of what the front and back covers of the book will look like.">
+</div>
+
+<div id="mlb2-27194879" class="ml-form-embedContainer ml-subscribe-form ml-subscribe-form-27194879">
+	<div class="ml-form-align-center ">
+		<div class="ml-form-embedWrapper embedForm">
+
+			<div class="ml-form-embedBody ml-form-embedBodyDefault row-form">
+
+				<div class="ml-form-embedContent" style=" ">
+					<h4>Want to keep up to date with the Bog? We have a newsletter for that.</h4>
+					<p>For information on our projects, work, and news put in your email below. We promise not to spam you, and
+						you can leave any time you like!<br><br>The Bog is warm this time of year.</p>
+				</div>
+
+				<form class="ml-block-form"
+					action="https://assets.mailerlite.com/jsonp/1593280/forms/157106260861257609/subscribe" data-code=""
+					method="post" target="_blank">
+					<div class="ml-form-formContent">
+						<div class="ml-form-fieldRow ml-last-item">
+							<div class="ml-field-group ml-field-email ml-validate-email ml-validate-required">
+								<input aria-label="email" aria-required="true" type="email" class="form-control" data-inputmask=""
+									name="fields[email]" placeholder="Email" autocomplete="email">
+							</div>
+						</div>
+					</div>
+					<input type="hidden" name="ml-submit" value="1">
+					<div class="ml-form-embedSubmit">
+						<button type="submit" class="primary">Subscribe</button>
+						<button disabled="disabled" style="display: none;" type="button" class="loading">
+							<div class="ml-form-embedSubmitLoad"></div>
+							<span class="sr-only">Loading...</span>
+						</button>
+					</div>
+					<input type="hidden" name="anticsrf" value="true">
+				</form>
+
+			</div>
+
+			<div class="ml-form-successBody row-success" style="display: none">
+
+				<div class="ml-form-successContent">
+					<h4>Welcome to the Bog! :D</h4>
+					<p>You have successfully joined our mailing&nbsp;list. Thanks for supporting our mission to make
+						quality&nbsp;indie TTRPGs!&nbsp;</p>
+				</div>
+
+			</div>
+		</div>
+	</div>
 </div>
 
 	</main>
