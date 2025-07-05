@@ -83,6 +83,19 @@ section {
   margin-bottom: 5rem;
 }
 
+details {
+  margin: auto auto 1rem 1rem;
+}
+
+details>summary {
+  margin-left: -1rem;
+  list-style-type: '+ ';
+}
+
+details[open]>summary {
+  list-style-type: '– ';
+}
+
 #license li {
   margin-bottom: 1rem;
 }
