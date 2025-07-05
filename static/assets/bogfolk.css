@@ -96,6 +96,10 @@ details[open]>summary {
   list-style-type: '– ';
 }
 
+iframe.itch {
+  width: 100%;
+}
+
 #license li {
   margin-bottom: 1rem;
 }
