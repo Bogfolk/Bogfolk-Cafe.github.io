@@ -83,6 +83,10 @@ section {
   margin-bottom: 5rem;
 }
 
+iframe.itch {
+  width: 100%;
+}
+
 #license li {
   margin-bottom: 1rem;
 }
@@ -279,6 +283,10 @@ footer {
 .socials svg {
   width: 6rem;
   fill: var(--white);
+}
+
+.socials img {
+  width: 6rem;
 }
 
 .col-grid {
