@@ -166,6 +166,10 @@ footer {
   margin-right: auto;
 }
 
+.wallOText p:first-child {
+  margin-top: 1rem;
+}
+
 @media (max-width: 960px) {
 
   /* This media query needs to cover every case where we get the mobile menu. */
