@@ -1,5 +1,5 @@
 :root {
-    --lichomaRed: #e41a47;
+	--lichomaRed: #e41a47;
 	--blackestBlack: #000000;
 }
 
@@ -17,88 +17,92 @@ html {
 	background-color: var(--lichomaRed);
 }
 
+#navbar .dropdown {
+	background-color: var(--lichomaRed);
+}
+
 #navbar a, a {
 	color: var(--blackestBlack);
 	font-weight: 400;
 }
 
 #navbar .navbar-item.active {
-  background-color: var(--white);
+	background-color: var(--white);
 }
 
 @media (max-width: 800px) {
-  #display-menu {
-	background-color: var(--lichomaRed);
-  }
+	#display-menu {
+		background-color: var(--lichomaRed);
+	}
 
-  #display-menu .line {
-    background: var(--white);
-  }
+	#display-menu .line {
+		background: var(--white);
+	}
 }
 
 h2 {
-  font-family: 'Bebas Neue';
-  font-size: 3rem;
-  font-weight: normal;
+	font-family: 'Bebas Neue';
+	font-size: 3rem;
+	font-weight: normal;
 }
 
-section > h2 > a {
-  color: var(--white);
+section>h2>a {
+	color: var(--white);
 }
 
 h3 {
-  font-family: 'Alegreya Sans SC', sans-serif;
-  font-size: 3rem;
-  margin-bottom: 1rem;
+	font-family: 'Alegreya Sans SC', sans-serif;
+	font-size: 3rem;
+	margin-bottom: 1rem;
 }
 
-ul > li {
+ul>li {
 	list-style-image: url("/assets/missy_lichoma.svg");
 }
 
 blockquote.boxed {
-  background: var(--white);
-  color: var(--blackestBlack);
+	background: var(--white);
+	color: var(--blackestBlack);
 }
 
 .video-container {
-  width: 560px;
+	width: 560px;
 }
 
 .right {
-  float: right;
-  max-width: 50%;
-  padding-left: 1rem;
-  padding-bottom: 1rem;
+	float: right;
+	max-width: 50%;
+	padding-left: 1rem;
+	padding-bottom: 1rem;
 }
 
 @media (max-width: 1024px) {
-  .right {
-	max-width: 60%;
-  }
+	.right {
+		max-width: 60%;
+	}
 }
 
 @media (max-width: 960px) {
-  .video-container {
-    width: unset;
-  }
+	.video-container {
+		width: unset;
+	}
 
-  .right {
-	float: none;
-	max-width: 100%;
-    padding-left: 0;
-    padding-bottom: 0;
-  }
+	.right {
+		float: none;
+		max-width: 100%;
+		padding-left: 0;
+		padding-bottom: 0;
+	}
 }
 
 .left {
-  float: left;
-  max-width: 50%;
+	float: left;
+	max-width: 50%;
 }
 
 @media (max-width: 640px) {
-  .left {
-	float: unset;
-	max-width: 100%;
-  }
+	.left {
+		float: unset;
+		max-width: 100%;
+	}
 }
