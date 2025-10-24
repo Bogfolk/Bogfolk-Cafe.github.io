@@ -6,3 +6,13 @@ function navbarOnclick() {
     navbar.classList.add('mobile-navbar-display');
   }
 }
+
+function dropdownOnClick(btn) {
+  console.log(btn);
+  const node = btn.parentNode.parentNode;
+  if(node.classList.contains('active')) {
+    node.classList.remove('active');
+  } else {
+    node.classList.add('active');
+  }
+}
